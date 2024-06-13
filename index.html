@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.paypal.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.telegram.org; script-src 'self' https://www.paypal.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+    <title>Cake Shop</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="icon" type="image/png" href="ZhaLogo.png">
+    <style>
+        body {
+            background-color: #FFDDDD;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo-icon {
+            width: 75px;
+            height: 75px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            background-color: #FFDDDD;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+
+        section h2 {
+            color: #ff6f61;
+            text-align: center;
+        }
+
+        .products-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .products-list li {
+            background-color: #fff0f5;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .products-list li img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .add-button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #e55b50;
+        }
+        
+        .logo-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .enlarged {
+            width: 100px;
+            height: 100px;
+        }
+        
+         .logo-icon:hover {
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-rect"></div>
+        <h1>Cake Shop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#Cakes">Cakes</a></li>
+            <li><a href="#Cupcakes">Cupcakes</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#Important">Important</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="customization">
+            <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Customization Options</h2>
+            <ul class="products-list">
+                <li>
+                    <img src="fondant.webp" alt="Fondant">
+                    <button class="add-button">Add Fondant</button>
+                    <p>15.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="message.webp" alt="Personalized Message">
+                    <button class="add-button">Add Message</button>
+                    <p>5.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="fruits.webp" alt="Fruits">
+                    <button class="add-button">Add Fruits</button>
+                    <p>15.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="whipD.webp" alt="Whipped cream">
+                    <button class="add-button">Add Whipped cream</button>
+                    <p>3.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="candy.webp" alt="Candy">
+                    <button class="add-button">Add Candy</button>
+                    <p>10.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+            </ul>
+        </section>
+        <section id="Cakes">
+            <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Cakes</h2>
+            <ul class="products-list">
+                <li>
+                    <img src="chocolatecake.webp" alt="Chocolate">
+                    <button class="add-button">Add Chocolate cake</button>
+                    <p>90.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="scarlet.webp" alt="Scarlet cake">
+                    <button class="add-button">Add Scarlet cake</button>
+                    <p>70.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="vanilla.webp" alt="Vanilla cake">
+                    <button class="add-button">Add Vanilla cake</button>
+                    <p>70.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="fruitsCake.webp" alt="Cake with fruits">
+                    <button class="add-button">Add Cake with fruits</button>
+                    <p>90.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="raffaello.webp" alt="Raffaello cake">
+                    <button class="add-button">Add Raffaello cake</button>
+                    <p>90.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="coffee.webp" alt="Coffee cake">
+                    <button class="add-button">Add Coffee cake</button>
+                    <p>60.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="Cremeschnitte.webp" alt="Cremeschnitte">
+                    <button class="add-button">Add Cremeschnitte</button>
+                    <p>80.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+            </ul>
+        </section>
+        <section id="Cupcakes">
+            <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Cupcakes (12Pcs)</h2>
+            <ul class="products-list">
+                <li>
+                    <img src="cupCB.webp" alt="Choco-Banana">
+                    <button class="add-button">Add Choco-Banana</button>
+                    <p>50.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="cupBlue.webp" alt="Blueberries">
+                    <button class="add-button">Add Blueberries</button>
+                    <p>50.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="cupCBlue.webp" alt="Blueberry-Choco">
+                    <button class="add-button">Add Blueberry-Choco</button>
+                    <p>60.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+                <li>
+                    <img src="cupChoco.webp" alt="Chocolate">
+                    <button class="add-button">Add Chocolate</button>
+                    <p>40.00€</p>
+                    <input type="number" value="1" min="1">
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+    <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Contact Us</h2>
+    <p>Phone (main): +33-758-327-608</p>
+    <p>Phone (secondary): +33-751-297-520</p>
+    <p>Phone (help): +33-751-023-572</p>
+    <p>Email: <a href="mailto:nlscakes4u@gmail.com">nlscakes4u@gmail.com</a></p>
+    <p>Address: 1B rue du vieux brisach, Saint-Louis 68300, France</p>
+    <p>Please note that we are not doing deliveries UNLESS it is for a customer that is less than 50 km far away and he pays the delivery fee which can vary depending on the location. The order needs to be over 100 euros for a delivery to be possible as we will be in a loss otherwise, thank you for considering.</p>
+    <p>The Order can take a few days to make as we will be searching for the best ingredients to make your order and we are really really sorry if it takes too much so please make your order with up to 10 days in advance of any event for which the order is needed, thank you for considering us!</p>
+    <p>ATTENTION! SOME OF OUR PRODUCTS CONTAIN ALLERGENS THAT MAY CAUSE ALLERGIC REACTIONS. THE FOLLOWING ALLERGENS MAY BE FOUND IN OUR CAKES:</p>
+    <p>- Milk and lactates</p>
+    <p>- Nuts (such as almonds, hazelnuts, walnuts)</p>
+    <p>- Eggs</p>
+    <p>- Wheat (gluten)</p>
+    <p>- Soy</p>
+    <p>- Coconut</p>
+    <p>- Sesame seeds</p>
+    <p>- Chocolate (contains milk and may contain traces of nuts)</p>
+        </section>
+        <section id="Important">
+        <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Important!</h2>
+            <p>We are using the images given ONLY as an EXAMPLE</p>
+            <p>and the products might not look like in the EXAMPLE images.</p>
+            <p>thank you for understanding.</p>
+        </section>
+        <section id="cart">
+            <h2><img class="logo-icon" src="ZhaLogo.png" alt="Logo"> Cart</h2>
+            <div id="cart-content"></div>
+            <button id="checkout-button">Checkout</button>
+        </section>
+    </main>
+    <script src="JS.js"></script>
+</body>
+</html>
